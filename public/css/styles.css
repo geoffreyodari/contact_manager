@@ -1,16 +1,24 @@
 .sidebar {
-    justify-content: center;
     width: 400px;
     height: 600px;
+    margin-top: 10px;
 }
 body {
-    background-color: rgb(238, 156, 211);
+    
+    background-size: cover;
 }
 .flex-container {
     display: flex;
     flex-direction: row;
-    background-color: rgb(247, 193, 206);
     width: 400px;
-    height: 400px;
-    justify-content: center;
+    height: 500px;
+    margin-left: 400px;
+    padding: 40px;
+    background-color: rgb(221, 202, 178);
+    margin-top: 40px;
+    
+}
+#name {
+    justify-content: flex-end;
+    padding-right: 60px;
 }
