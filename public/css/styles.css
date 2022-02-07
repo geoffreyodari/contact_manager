@@ -1,3 +1,16 @@
-.header {
+.sidebar {
+    justify-content: center;
+    width: 400px;
+    height: 600px;
+}
+body {
+    background-color: rgb(238, 156, 211);
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(247, 193, 206);
+    width: 400px;
+    height: 400px;
     justify-content: center;
 }
