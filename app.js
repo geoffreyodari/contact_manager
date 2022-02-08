@@ -1,13 +1,13 @@
-// Import express package
+// Importing express package
 const express = require('express');
 
-// Initialize express
+// Initializing express
 const app = express();
 
-// Set a static folder
+// Setting a static folder
 app.use(express.static('public'));
 
-// Define the port number
+// Defining the port number
 const PORT = 5000;
 
 app.listen(PORT, ()=>{
