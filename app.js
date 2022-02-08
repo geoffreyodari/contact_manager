@@ -1,12 +1,15 @@
-// Import express framework
+// Import express package
 const express = require('express');
 
-// Initiating express
+// Initialize express
 const app = express();
 
-// Define the port number
-const port = 5000;
+// Set a static folder
+app.use(express.static('public'));
 
-app.listen(port, function(){
-   console.log(`Server is listening on port ${port}`)
+// Define the port number
+const PORT = 5000;
+
+app.listen(PORT, ()=>{
+   console.log(`Server is listening on port ${PORT}`)
 })
