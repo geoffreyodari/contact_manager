@@ -1,0 +1,35 @@
+.sidebar {
+    width: 400px;
+    height: 600px;
+    margin-top: 10px;
+}
+body {
+    
+    background-size: cover;
+    opacity: 0.9;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 500px;
+    margin-left: 450px;
+    padding: 40px;
+    background-color: rgb(221, 202, 178);
+    margin-top: 40px;
+    
+}
+#name {
+    justify-content: flex-end;
+    padding-right: 60px;
+    color: coral;
+}
+#Title {
+    color: coral;
+}
+#btn {
+    background-color: coral;
+    margin-left: 30%;
+    color: white;
+    border-color: white;
+}
