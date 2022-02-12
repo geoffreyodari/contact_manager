@@ -7,13 +7,13 @@ $(document).ready(()=>{
 
         if($(':input').val()==''){
             e.preventDefault()
-            console.log('blank')
+            alert('inputs cannot be blank')
         }else if(!emailExpression.test($('#email').val())){
             e.preventDefault()
-            console.log('please enter a valid email')
+            alert('please enter a valid email')
         }else if(!phoneExpression.test($('#phone').val())){
             e.preventDefault()
-            console.log('invalid phone')
+            alert('invalid phone')
         }else{
             console.log("OK")
         }
