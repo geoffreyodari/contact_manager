@@ -7,13 +7,13 @@ $(document).ready(()=>{
 
         if($(':input').val()==''){
             e.preventDefault()
-            alert('inputs cannot be blank')
+            $('.error-msg').text('inputs cannot be blank')
         }else if(!emailExpression.test($('#email').val())){
             e.preventDefault()
-            alert('please enter a valid email')
+            $('#email').siblings('p').text('please enter a valid email')
         }else if(!phoneExpression.test($('#phone').val())){
             e.preventDefault()
-            alert('invalid phone')
+            $('#email').siblings('p').text('please enter a valid 10 digit phone number')
         }else{
             console.log("OK")
         }
