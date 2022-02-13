@@ -1,23 +1,26 @@
 // Importing express package
 const express = require('express');
-// Importing packages for handling post requet data
+// Importing packages for handling post request 
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const upload = multer();
 
+let indexRouter = require('./routes/index');
 
 // Initializing express
 const app = express();
 
-// Setting a static folder
+// Set a static folder
 app.use(express.static('public'));
 
-// handling add contact request
-app.post('/add',(req,res)=>{
-               res.send("<p>Contact added</p>")
-      }
-   )
+// for parsing application/xwww-
+app.use(bodyParser.urlencoded({ extended: true })); 
+//form-urlencoded
 
+// handling add contact request
+app.use('/',indexRouter)
+
+app.use('/add',indexRouter)
 // Defining the port number
 const PORT = 5000;
 
