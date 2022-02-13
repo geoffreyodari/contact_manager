@@ -7,6 +7,11 @@ const app = express();
 // Setting a static folder
 app.use(express.static('public'));
 
+app.post('/add',(req,res)=>{
+               res.send("<p>Contact added</p>")
+      }
+   )
+
 // Defining the port number
 const PORT = 5000;
 
