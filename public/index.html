@@ -13,15 +13,30 @@
         <div class="sidebar">
             <h3 id="Title">Contacts Manager</h3>
             <form class="entry" method="post" action="./add">
-              <label for="firstname">First Name</label>
-              <input type="text" id="firstname" name="firstname"><br><br>
-              <label for="othernames">Other Names</label>
-              <input type="text" id="othernames" name="othernames"><br><br>
-              <label for="phone">Phone Number</label>
-              <input type="text" id="phone" name="phone"><br><br>
-              <label for="email ">email address:</label>
-              <input type="text"  id="email" name="email"><br><br>
-              <input type="submit"id="btn" value="Submit"><br><br>
+                <div class="inputs pt-3">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name">
+                    <p class="error-msg"></p>
+                </div>
+                <div class="inputs pt-3">
+                    <label for="othernames">Other Names</label>
+                    <input type="text" id="othernames" name="othernames" placeholder="Other Names">
+                    <p class="error-msg"></p>
+                </div>
+                <div class="inputs pt-3">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" placeholder="0000-000-000">
+                    <p class="error-msg"></p>
+                </div>
+                <div class="inputs pt-3">
+                    <label for="email ">Email address</label>
+                    <input type="text"  id="email" name="email" placeholder="user@domain.tld">
+                    <p class="error-msg"></p>
+                </div>
+                <div class=" pt-3">
+                    <input type="submit" id="btn" value="Submit">
+                </div>
+                
             </form>
         </div>
     </div>

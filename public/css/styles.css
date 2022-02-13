@@ -8,6 +8,10 @@ body {
     background-size: cover;
     opacity: 0.9;
 }
+.error-msg{
+    color: red;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -19,6 +23,15 @@ body {
     margin-top: 40px;
     
 }
+
+[type=text]{
+    width: 100%;
+}
+
+label{
+    display:block;
+}
+
 #name {
     justify-content: flex-end;
     padding-right: 60px;
