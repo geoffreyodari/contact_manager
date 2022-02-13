@@ -1,5 +1,5 @@
 const express = require('express');
-
+const Contact = require('../models/contacts')
 
 const router = express.Router()
 
@@ -13,8 +13,10 @@ router.get('/',(req,res)=>{
 
 //route to handle saving of contacts
  router.post('/add',(req,res)=>{
-
-     res.send("<h5>Contact added!</h5>")
+     let newContact = new Contact(req.body)
+     console.log(newContact)
+     newContact.save()
+     res.send(`The contact has been saved in your contact list`)
  })
 
  module.exports = router

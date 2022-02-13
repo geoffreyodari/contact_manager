@@ -5,7 +5,19 @@ const bodyParser = require('body-parser');
 const multer = require('multer');
 const upload = multer();
 
+//Importing mongoose package
+const mongoose = require('mongoose');
+
 let indexRouter = require('./routes/index');
+
+let mongodbUrl = 'mongodb://127.0.0.1:27017/';
+let dbName = 'contact_manager';
+mongoose.connect(mongodbUrl+dbName)
+let db = mongoose.connection;
+
+db.once('open',()=>console.log('Database connection was a success'))
+db.once('error',()=>console.log('Database connection was a failure'))
+
 
 // Initializing express
 const app = express();
