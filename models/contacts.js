@@ -7,8 +7,8 @@ let ContactSchema = new Schema({
     firstname: String,
     othernames: String,
     phone: String,
-    email: String
-
+    email: String,
+    date:{type:Date,default: Date()}
 })
 
 let Contact = mongoose.model('contact',ContactSchema)
