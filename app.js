@@ -13,7 +13,7 @@ let viewRouter = require('./routes/view_routes');
 app.set('view engine', 'ejs');
 
 // Routes
-app.use('/viewlist', viewRouter);
+app.use('/view', viewRouter);
 
 // Connecting to the Database
 let mongodb_url = 'mongodb://127.0.0.1:27017/';
