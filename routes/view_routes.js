@@ -1,14 +1,15 @@
 // View page router
 const express = require('express');
 const router = express.Router();
-const contact_manager = require('../models/view_models');
+const contacts = require('../models/view_models');
 
 router.get('/', (req,res)=>{
-    contact_manager.find({}, (error, contacts)=>{
+    contacts.find({}, (error, contact_manager)=>{
         if (error){
             console.log(error);
         }else{
-            res.render('viewcontacts', { contacts:contacts, msg: req.query.msg});
+            console.log(contact_manager)
+            res.render("viewcontacts", { contacts: contact_manager, msg: req.query.msg })
         }
     })
  })

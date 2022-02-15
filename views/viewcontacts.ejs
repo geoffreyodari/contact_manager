@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>Contact Manager</title>
 </head>
-<body>
-    <div class = 'container'>
-    <table class="table table-striped mt-5">
+<body background="./resources/Red_sea.jpg">
+  <div class="container table-list">
+      <table class="table table-striped mt-5">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">No.</th>
             <th scope="col">First Name</th>
             <th scope="col">Other Names</th>
             <th scope="col">Phone Number</th>
@@ -21,20 +21,38 @@
           </tr>
         </thead>
         <tbody>
-                <% contacts.forEach(function(contact){ %>
+          
           <tr>
-            <th scope="row">1</th>
-            <td><%=contact.firstname %></td>
-            <td><%=contact.othernames %></td>
-            <td><%=contact.phone %></td>
-            <td><%=contact.email %></td>
-            <td><a href="/edit/<%=data.id%>">Edit</a></td>
-            <td><a href="/delete/<%=data.id%>">Delete</a></td>
-          </tr>
-          <% }); %> 
+            <%
+            if(contacts.length!=0){
+            var i=1;
+            contacts.forEach(function(contact){%>
+            <td><%=i; %></td>
+            <td>
+              <%= contact.firstname %>
+            </td>
+            <td>
+              <%= contact.othernames %>
+            </td>
+            <td>
+              <%= contact.phone %>
+            </td>
+            <td>
+              <%= contact.email %>
+            </td>
+            <td><a href="/edit/<%=contact.id%>">Edit</a></td>
+            <td><a href="/delete/<%=contact.id%>">Delete</a></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+          
         </tbody>
       </table>
-      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src ="./js/main.js"></script>
 </body>

@@ -12,5 +12,5 @@ var ViewSchema = new Schema({
 });
 
 // convert the schema into a Model
-var contact_manager = mongoose.model('contact_manager', ViewSchema);
-module.exports = contact_manager;
+var contacts_manager = mongoose.model('contacts', ViewSchema);
+module.exports = contacts_manager;

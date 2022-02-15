@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // Setting a static folder
-//app.use(express.static('public'));
+app.use(express.static('public'));
 let viewRouter = require('./routes/view_routes');
 
 // Set up a view engine
@@ -17,7 +17,7 @@ app.use('/viewlist', viewRouter);
 
 // Connecting to the Database
 let mongodb_url = 'mongodb://127.0.0.1:27017/';
-let dbName = 'contact_manager';
+let dbName = 'contacts_manager';
 mongoose.connect(mongodb_url + dbName,)
 let db = mongoose.connection;
 
