@@ -12,10 +12,9 @@
     <div class="flex-container">
         <div class="sidebar">
             <h3 id="Title">Edit Contact</h3>
-            <form class="entry" method="post" action="./update">
+            <form class="entry" method="post" action="../update">
                 <div class="inputs pt-1">
-                    <label for="_id">id</label>
-                    <input type="text" id="firstname" name="_id"  value="<%= contact._id%>" disabled>
+                    <input type="text" id="_id" name="_id"  value="<%= contact._id%>" hidden>
                     <p class="error-msg"></p>
                 </div>
                 <div class="inputs pt-1">
