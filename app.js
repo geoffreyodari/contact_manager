@@ -19,10 +19,15 @@ let db = mongoose.connection;
 // Initializing express
 const app = express();
 
+// for parsing application/xwww-
+app.use(bodyParser.urlencoded({ extended: true })); 
+//form-urlencoded
+
 // Set a static folder
 app.use(express.static('public'));
 let viewRouter = require('./routes/view_routes');
 let editRouter = require('./routes/edit_route');
+let updateRouter = require('./routes/update');
 
 // Set up a view engine
 app.set('view engine', 'ejs');
@@ -30,6 +35,7 @@ app.set('view engine', 'ejs');
 // Routes
 app.use('/view', viewRouter);
 app.use('/edit', editRouter);
+app.use('/update', updateRouter);
 
 // Check Connection
 db.once('open', ()=>{
@@ -41,9 +47,7 @@ db.on('error', (error)=>{
    console.log(error);
 })
 
-// for parsing application/xwww-
-app.use(bodyParser.urlencoded({ extended: true })); 
-//form-urlencoded
+
 
 // handling add contact request
 app.use('/',indexRouter)
