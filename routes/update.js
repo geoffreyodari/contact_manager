@@ -6,7 +6,7 @@ const router = express.Router()
 
 //route to handle saving of contacts
  router.post('/',(req,res)=>{
-     //let newContact = new Contact(req.body)
+     
      let data = req.body
      let filter = { _id: data["_id"]};
      let update = {
@@ -15,9 +15,9 @@ const router = express.Router()
                     phone: data.phone,
                     email: data.email
                 }
-                console.log(filter)
-                //Update Contact and redirect to view contact
-    Contact.updateOne(filter,{$set:update},{upsert:true},(err,success)=>(err)?res.send(err):res.redirect("/view"))
+                
+    //Update Contact and redirect to view contact
+     Contact.updateOne(filter,{$set:update},{upsert:true},(err,success)=>(err)?res.send(err):res.redirect("/view"))
      
  })
 
