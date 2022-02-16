@@ -22,12 +22,14 @@ const app = express();
 // Set a static folder
 app.use(express.static('public'));
 let viewRouter = require('./routes/view_routes');
+let editRouter = require('./routes/edit_route');
 
 // Set up a view engine
 app.set('view engine', 'ejs');
 
 // Routes
 app.use('/view', viewRouter);
+app.use('/edit', editRouter);
 
 // Check Connection
 db.once('open', ()=>{
