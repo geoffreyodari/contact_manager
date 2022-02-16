@@ -1,11 +1,25 @@
 // Importing express package
 const express = require('express');
+
+// Importing packages for handling post request 
+const bodyParser = require('body-parser');
+const multer = require('multer');
+const upload = multer();
+
+//Importing mongoose package
 const mongoose = require('mongoose');
+
+let indexRouter = require('./routes/index');
+
+let mongodbUrl = 'mongodb://127.0.0.1:27017/';
+let dbName = 'contact_manager';
+mongoose.connect(mongodbUrl+dbName)
+let db = mongoose.connection;
 
 // Initializing express
 const app = express();
 
-// Setting a static folder
+// Set a static folder
 app.use(express.static('public'));
 let viewRouter = require('./routes/view_routes');
 
@@ -14,12 +28,6 @@ app.set('view engine', 'ejs');
 
 // Routes
 app.use('/view', viewRouter);
-
-// Connecting to the Database
-let mongodb_url = 'mongodb://127.0.0.1:27017/';
-let dbName = 'contacts_manager';
-mongoose.connect(mongodb_url + dbName,)
-let db = mongoose.connection;
 
 // Check Connection
 db.once('open', ()=>{
@@ -31,6 +39,14 @@ db.on('error', (error)=>{
    console.log(error);
 })
 
+// for parsing application/xwww-
+app.use(bodyParser.urlencoded({ extended: true })); 
+//form-urlencoded
+
+// handling add contact request
+app.use('/',indexRouter)
+
+app.use('/add',indexRouter)
 // Defining the port number
 const PORT = 5000;
 

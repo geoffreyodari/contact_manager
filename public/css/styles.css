@@ -8,11 +8,18 @@ body {
     background-size: cover;
     opacity: 0.9;
 }
+.error-msg{
+    color: red;
+    font-style: italic;
+    display: block;
+    background: rgba(248, 246, 246, 0.479);
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
     width: 400px;
-    height: 500px;
+    height: 600px;
     margin-left: 450px;
     padding: 40px;
     background-color: rgb(221, 202, 178);
@@ -23,6 +30,15 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+[type=text]{
+    width: 100%;
+}
+
+label{
+    display:block;
+}
+
 #name {
     justify-content: flex-end;
     padding-right: 60px;
