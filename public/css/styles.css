@@ -53,3 +53,20 @@ label{
     color: white;
     border-color: white;
 }
+ul#menubar li {
+    display: inline;
+    padding: 20px;  
+      
+}
+.navbar {
+    float: right;
+    font-family:sans-serif;
+    height: 20px;
+}
+#menubar {
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: aliceblue;
+    font-size: 20px;
+}
