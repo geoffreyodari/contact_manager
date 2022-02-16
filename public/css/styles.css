@@ -23,8 +23,12 @@ body {
     margin-left: 450px;
     padding: 40px;
     background-color: rgb(221, 202, 178);
-    margin-top: 40px;
-    
+    margin-top: 40px; 
+}
+.table-list {
+    background-color: rgb(221, 202, 178); 
+    align-items: center;
+    justify-content: center;
 }
 
 [type=text]{
