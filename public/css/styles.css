@@ -55,18 +55,19 @@ label{
 }
 ul#menubar li {
     display: inline;
-    padding: 20px;  
+    padding: 20px;
+    /* background-color: white; */
+    background-color: rgb(221, 202, 178);
       
 }
 .navbar {
     float: right;
-    font-family:sans-serif;
+    font-family:'Times New Roman', Times, serif;
     height: 20px;
+    margin-top:10px;
+    color: white;
 }
-#menubar {
-    float: right;
-    margin-right: 10px;
-    margin-top: 5px;
-    color: aliceblue;
-    font-size: 20px;
+.container {
+    
+
 }
