@@ -41,7 +41,7 @@
               <%= contact.email %>
             </td>
             <td><a href="/edit/<%=contact.id%>">Edit</a></td>
-            <td><a href="/delete/<%=contact.id%>">Delete</a></td>
+            <td><a href="/delete/<%=contact.id%>" onclick="ConfirmDelete()">Delete</a></td>
         </tr>
         <%  i++; }) %>
         <% } else{ %>
