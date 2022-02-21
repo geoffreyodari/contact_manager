@@ -56,18 +56,22 @@ label{
 ul#menubar li {
     display: inline;
     padding: 20px;
-    /* background-color: white; */
     background-color: rgb(221, 202, 178);
-      
+
 }
 .navbar {
     float: right;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT';
     height: 20px;
     margin-top:10px;
-    color: white;
-}
-.container {
-    
+    color:#bbbbbb;
+    border-color:rgb(233, 11, 78)
 
+}
+    
+#menubar:hover {
+    display: inline;
+    font: bold;
+    size: 40px;
+      
 }
