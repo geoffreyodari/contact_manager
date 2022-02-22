@@ -18,9 +18,30 @@ $(document).ready(()=>{
             console.log("OK")
         }
     })
+
+    //Delete Record
+    $('#delete').on('click', function () {
+            if (ConfirmDelete()) {
+                var id = $('#delete').attr('data-id');
+                $.ajax({
+                    method: 'delete',
+                    url: '/view/' + id,
+                    success: function (response) {
+                        alert("Record deleted successfully.");
+                        window.location.href = '/view';
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+                })
+            }
+        })
 })
 
-function ConfirmDelete()
-{
-  return confirm("Are you sure you want to delete this record?");
+function ConfirmDelete() {
+    var x = false;
+    x = confirm("Are you sure you want to delete?");
+    console.log(x);
+    return x;
 }
+
