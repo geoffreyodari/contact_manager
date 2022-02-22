@@ -1,7 +1,7 @@
 // View page router
 const express = require('express');
 const router = express.Router();
-const contacts = require('../models/view_models');
+const contacts = require('../models/contacts');
 
 
 

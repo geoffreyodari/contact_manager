@@ -25,8 +25,18 @@ body {
     background-color: rgb(221, 202, 178);
     margin-top: 40px; 
 }
+
+.flex-container1 {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    width: 70%;
+    background-color: rgb(221, 202, 178);
+    margin: auto;
+    margin-top: 40px; 
+}
 .table-list {
-    background-color: rgb(221, 202, 178); 
+    background-color: rgb(221, 202, 178);
     align-items: center;
     justify-content: center;
 }
