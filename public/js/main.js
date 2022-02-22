@@ -21,7 +21,7 @@ $(document).ready(()=>{
 
     //Delete Record
     $('.deleterecord').on('click',function(){
-                var id = $('.deleterecord').attr('data-id');
+                var id = $(this).attr('data-id');
                 console.log(id);
                 if (ConfirmDelete()) {
                 $.ajax({

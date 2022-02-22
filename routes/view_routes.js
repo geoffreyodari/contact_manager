@@ -15,7 +15,7 @@ router.get('/', (req,res)=>{
 
 // Delete record
 router.delete('/:id', (req,res)=>{
-    contact.findByIdAndRemove({_id:req.params.id}, (error)=>{
+    contact.deleteOne({_id:req.params.id}, (error)=>{
         if (error){
             console.log(error)
         }
