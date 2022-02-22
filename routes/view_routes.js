@@ -1,16 +1,25 @@
 // View page router
 const express = require('express');
 const router = express.Router();
-const contacts = require('../models/view_models');
+const contact = require('../models/contacts');
 
 router.get('/', (req,res)=>{
-    contacts.find({}, (error, contact_manager)=>{
+    contact.find({}, (error, contact_manager)=>{
         if (error){
             console.log(error);
         }else{
-            console.log(contact_manager)
             res.render("viewcontacts", { contacts: contact_manager, msg: req.query.msg })
         }
+    })
+ })
+
+// Delete record
+router.delete('/:id', (req,res)=>{
+    contact.deleteOne({_id:req.params.id}, (error)=>{
+        if (error){
+            console.log(error)
+        }
+        res.send('Success')
     })
  })
 

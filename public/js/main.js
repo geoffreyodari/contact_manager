@@ -24,4 +24,33 @@ $(document).ready(()=>{
             $('#phone').siblings('p').text('Please enter a valid 10 digit phone number')
         }
     })
+
+    //Delete Record
+    $('.deleterecord').on('click',function(){
+                var id = $(this).attr('data-id');
+                console.log(id);
+                if (ConfirmDelete()) {
+                $.ajax({
+                    method: 'delete',
+                    url: '/view/' + id,
+                    success: function (response) {
+                        console.log("Success DELETION!!" +id)
+                        alert("Record deleted successfully.");
+                        window.location.href = '/view';
+                        
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+                })
+            }
+        })
 })
+
+function ConfirmDelete() {
+    var x = false;
+    x = confirm("Are you sure you want to delete?");
+    console.log(x)
+    return x;
+}
+
