@@ -16,7 +16,7 @@ router.get('/',(req,res)=>{
      let newContact = new Contact(req.body)
      console.log(newContact)
      newContact.save()
-     res.send(`The contact has been saved in your contact list`)
+     res.redirect('/view')
  })
 
  module.exports = router
