@@ -11,9 +11,9 @@ const mongoose = require('mongoose');
 
 let indexRouter = require('./routes/index');
 
-let mongodbUrl = 'mongodb://127.0.0.1:27017/';
-let dbName = 'contact_manager';
-mongoose.connect(mongodbUrl+dbName)
+let mongodbUrl = 'mongodb+srv://odari:hPhMqq4BzVuSrksZ@cluster0.7wdrl.mongodb.net/contact_manager?retryWrites=true&w=majority';
+//let dbName = 'contact_manager';
+mongoose.connect(mongodbUrl)
 let db = mongoose.connection;
 
 // Initializing express
@@ -54,7 +54,7 @@ app.use('/',indexRouter)
 
 app.use('/add',indexRouter)
 // Defining the port number
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, ()=>{
    console.log(`Server is listening on port ${PORT}`)
