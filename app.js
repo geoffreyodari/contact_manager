@@ -12,8 +12,8 @@ const mongoose = require('mongoose');
 let indexRouter = require('./routes/index');
 
 let mongodbUrl = 'mongodb+srv://odari:hPhMqq4BzVuSrksZ@cluster0.7wdrl.mongodb.net/contact_manager?retryWrites=true&w=majority';
-let dbName = 'contact_manager';
-mongoose.connect(mongodbUrl+dbName)
+//let dbName = 'contact_manager';
+mongoose.connect(mongodbUrl)
 let db = mongoose.connection;
 
 // Initializing express
