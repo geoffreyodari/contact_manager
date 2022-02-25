@@ -1,6 +1,9 @@
 # Contact Manager
 Contact manager is a Node JS application for managing contacts.
 
+### Authors
+Rachael Gathagu, Enoch Maonga and Geoffrey Odari
+
 ## Installation requirements
 
 You will need to install  Node JS and Mongo DB
@@ -15,7 +18,7 @@ To install Mongoose go to https://docs.mongodb.com/manual/installation/ for inst
 $ mkdir contact_manager
 ````
 
-2. Download and install the application from github
+2. Download and install the application from github on your server
 ````
 $ npm i https://github.com/geoffreyodari/contact_manager
 ````
