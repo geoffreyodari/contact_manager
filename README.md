@@ -16,19 +16,24 @@ To install Node Js go to https://nodejs.org/en/
 To install Mongoose go to https://docs.mongodb.com/manual/installation/ for installation instructions
 
 ## Installation
-1. Create a folder named "Contact_manager"
+1. download the application from github "
 ````
-$ mkdir contact_manager
-````
-
-2. Download and install the application from github on your server
-````
-$ npm i https://github.com/geoffreyodari/contact_manager
+$ git clone https://github.com/geoffreyodari/contact_manager
 ````
 
-3. Start the server
+2. Step into the contact manager folder
 ````
-$ npm run start
+$ cd contact_manager
+````
+
+3. install the application dependancies 
+````
+[contact_manager]$ npm i https://github.com/geoffreyodari/contact_manager
+````
+
+4. Start the server
+````
+[contact_manager]$ npm run start
 ````
 
 ## Using the application
