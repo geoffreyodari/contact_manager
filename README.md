@@ -28,7 +28,7 @@ $ cd contact_manager
 
 3. install the application dependancies 
 ````
-[contact_manager]$ npm i https://github.com/geoffreyodari/contact_manager
+[contact_manager]$ npm i 
 ````
 
 4. Start the server
