@@ -1,7 +1,7 @@
 {
   "name": "contact_manager",
   "version": "1.0.0",
-  "description": "Simple contact management apllication",
+  "description": "Simple contact management application",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/geoffreyodari/contact_manager/issues"
   },
-  "homepage": "https://github.com/geoffreyodari/contact_manager#readme"
+  "homepage": "https://github.com/geoffreyodari/contact_manager#readme",
+  "devDependencies": {}
 }
