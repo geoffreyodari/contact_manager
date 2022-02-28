@@ -1,6 +1,9 @@
 # Contact Manager
 Contact manager is a Node JS application for managing contacts.
 
+## view demo
+https://contact-manager-demo-version1.herokuapp.com/
+
 ### Authors
 Rachael Gathagu, Enoch Maonga and Geoffrey Odari
 
